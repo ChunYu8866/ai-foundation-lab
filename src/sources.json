@@ -1,0 +1,225 @@
+{
+  "retrievedDate": "2026-10-31",
+  "retrievedTimezone": "Asia/Taipei",
+  "method": "Direct HTTP GET of public YouTube playlist pages; parsed ytInitialData metadata and lockupViewModel video entries.",
+  "verificationScope": "Playlist name, author, video title, order, ID and displayed duration confirmed from public playlist metadata. No video transcripts or audiovisual content were read. Editorial study notes and practice questions must be identified as original topic-based learning aids, not quotations or verified summaries of the videos.",
+  "totalVideos": 17,
+  "totalDurationSeconds": 26209,
+  "playlists": [
+    {
+      "id": "PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+      "subject": 1,
+      "title": "iPAS AI應用規劃師(初級)科目一",
+      "description": "iPAS AI應用規劃師(初級)科目一相關的介紹",
+      "url": "https://www.youtube.com/playlist?list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+      "author": "iPAS AI",
+      "authorUrl": "https://www.youtube.com/@EasonCheng-l5u",
+      "videoCount": 10,
+      "totalDurationSeconds": 18060,
+      "complete": true,
+      "videos": [
+        {
+          "id": "c-zDrEi-2YM",
+          "playlistIndex": 1,
+          "title": "01-1140322 IPAS AI應用規劃師考試分享",
+          "duration": "33:59",
+          "durationSeconds": 2039,
+          "url": "https://www.youtube.com/watch?v=c-zDrEi-2YM&list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/c-zDrEi-2YM",
+          "thumbnailUrl": "https://i.ytimg.com/vi/c-zDrEi-2YM/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "xu7AKnzS5iY",
+          "playlistIndex": 2,
+          "title": "02- L11101 AI的定義與分類",
+          "duration": "22:42",
+          "durationSeconds": 1362,
+          "url": "https://www.youtube.com/watch?v=xu7AKnzS5iY&list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/xu7AKnzS5iY",
+          "thumbnailUrl": "https://i.ytimg.com/vi/xu7AKnzS5iY/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "M3hliceeNaY",
+          "playlistIndex": 3,
+          "title": "03- L11102  AI治理概念",
+          "duration": "43:39",
+          "durationSeconds": 2619,
+          "url": "https://www.youtube.com/watch?v=M3hliceeNaY&list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/M3hliceeNaY",
+          "thumbnailUrl": "https://i.ytimg.com/vi/M3hliceeNaY/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "YKLS_feutUI",
+          "playlistIndex": 4,
+          "title": "04- L11201 資料基本概念與來源",
+          "duration": "12:10",
+          "durationSeconds": 730,
+          "url": "https://www.youtube.com/watch?v=YKLS_feutUI&list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/YKLS_feutUI",
+          "thumbnailUrl": "https://i.ytimg.com/vi/YKLS_feutUI/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "6UzD9v241a8",
+          "playlistIndex": 5,
+          "title": "05- L11202 資料整理與分析流程",
+          "duration": "48:07",
+          "durationSeconds": 2887,
+          "url": "https://www.youtube.com/watch?v=6UzD9v241a8&list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/6UzD9v241a8",
+          "thumbnailUrl": "https://i.ytimg.com/vi/6UzD9v241a8/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "26IPY5s67aI",
+          "playlistIndex": 6,
+          "title": "06- L11203資料隱私與安全",
+          "duration": "33:20",
+          "durationSeconds": 2000,
+          "url": "https://www.youtube.com/watch?v=26IPY5s67aI&list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/26IPY5s67aI",
+          "thumbnailUrl": "https://i.ytimg.com/vi/26IPY5s67aI/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "H0eZZriNNHw",
+          "playlistIndex": 7,
+          "title": "07- L11301 機器學習基本原理與目的",
+          "duration": "29:34",
+          "durationSeconds": 1774,
+          "url": "https://www.youtube.com/watch?v=H0eZZriNNHw&list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/H0eZZriNNHw",
+          "thumbnailUrl": "https://i.ytimg.com/vi/H0eZZriNNHw/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "lFdBKxpi4s8",
+          "playlistIndex": 8,
+          "title": "08- L11302 常見的機器學習模型與評估方法",
+          "duration": "26:38",
+          "durationSeconds": 1598,
+          "url": "https://www.youtube.com/watch?v=lFdBKxpi4s8&list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/lFdBKxpi4s8",
+          "thumbnailUrl": "https://i.ytimg.com/vi/lFdBKxpi4s8/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "FYs4SYkO3ZE",
+          "playlistIndex": 9,
+          "title": "09- L11401 鑑別式 AI 與生成式 AI 的基本原理",
+          "duration": "24:20",
+          "durationSeconds": 1460,
+          "url": "https://www.youtube.com/watch?v=FYs4SYkO3ZE&list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/FYs4SYkO3ZE",
+          "thumbnailUrl": "https://i.ytimg.com/vi/FYs4SYkO3ZE/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "IWV9jYSK4BY",
+          "playlistIndex": 10,
+          "title": "10 -L11402 鑑別式 AI 與生成式 AI 的整合應用",
+          "duration": "26:31",
+          "durationSeconds": 1591,
+          "url": "https://www.youtube.com/watch?v=IWV9jYSK4BY&list=PLwGaDBtzBoU9gjO2xGFxpA_VhYICZZVvj",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/IWV9jYSK4BY",
+          "thumbnailUrl": "https://i.ytimg.com/vi/IWV9jYSK4BY/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        }
+      ]
+    },
+    {
+      "id": "PLwGaDBtzBoU-S9AfCdiBlDmV1aVuTqqXu",
+      "subject": 2,
+      "title": "iPAS AI應用規劃師(初級)科目二",
+      "description": "iPAS AI應用規劃師(初級)科目二相關資料介紹",
+      "url": "https://www.youtube.com/playlist?list=PLwGaDBtzBoU-S9AfCdiBlDmV1aVuTqqXu",
+      "author": "iPAS AI",
+      "authorUrl": "https://www.youtube.com/@EasonCheng-l5u",
+      "videoCount": 7,
+      "totalDurationSeconds": 8149,
+      "complete": true,
+      "videos": [
+        {
+          "id": "CAjTcF70LA4",
+          "playlistIndex": 1,
+          "title": "11- L12101 No Code 及Low Code 的基本概念",
+          "duration": "27:09",
+          "durationSeconds": 1629,
+          "url": "https://www.youtube.com/watch?v=CAjTcF70LA4&list=PLwGaDBtzBoU-S9AfCdiBlDmV1aVuTqqXu",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/CAjTcF70LA4",
+          "thumbnailUrl": "https://i.ytimg.com/vi/CAjTcF70LA4/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "Bd3UFFr19eg",
+          "playlistIndex": 2,
+          "title": "12- L12102 No Code   Low Code 的優勢與限制",
+          "duration": "11:33",
+          "durationSeconds": 693,
+          "url": "https://www.youtube.com/watch?v=Bd3UFFr19eg&list=PLwGaDBtzBoU-S9AfCdiBlDmV1aVuTqqXu",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Bd3UFFr19eg",
+          "thumbnailUrl": "https://i.ytimg.com/vi/Bd3UFFr19eg/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "GxSrBxJCfek",
+          "playlistIndex": 3,
+          "title": "13- L12201 生成式AI應用領域與常見工具",
+          "duration": "16:49",
+          "durationSeconds": 1009,
+          "url": "https://www.youtube.com/watch?v=GxSrBxJCfek&list=PLwGaDBtzBoU-S9AfCdiBlDmV1aVuTqqXu",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/GxSrBxJCfek",
+          "thumbnailUrl": "https://i.ytimg.com/vi/GxSrBxJCfek/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "LffZsWNyjaU",
+          "playlistIndex": 4,
+          "title": "14- L12202 如何善用生成式AI工具",
+          "duration": "24:54",
+          "durationSeconds": 1494,
+          "url": "https://www.youtube.com/watch?v=LffZsWNyjaU&list=PLwGaDBtzBoU-S9AfCdiBlDmV1aVuTqqXu",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/LffZsWNyjaU",
+          "thumbnailUrl": "https://i.ytimg.com/vi/LffZsWNyjaU/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "AtfPse-muBU",
+          "playlistIndex": 5,
+          "title": "15- L12301 生成式 AI 導入評估",
+          "duration": "24:05",
+          "durationSeconds": 1445,
+          "url": "https://www.youtube.com/watch?v=AtfPse-muBU&list=PLwGaDBtzBoU-S9AfCdiBlDmV1aVuTqqXu",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/AtfPse-muBU",
+          "thumbnailUrl": "https://i.ytimg.com/vi/AtfPse-muBU/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "NEpJpBuNJ0A",
+          "playlistIndex": 6,
+          "title": "16- L12302 生成式 AI 導入規劃",
+          "duration": "15:14",
+          "durationSeconds": 914,
+          "url": "https://www.youtube.com/watch?v=NEpJpBuNJ0A&list=PLwGaDBtzBoU-S9AfCdiBlDmV1aVuTqqXu",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/NEpJpBuNJ0A",
+          "thumbnailUrl": "https://i.ytimg.com/vi/NEpJpBuNJ0A/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        },
+        {
+          "id": "iNKS05UHEko",
+          "playlistIndex": 7,
+          "title": "17- L12303：生成式 AI 風險管理",
+          "duration": "16:05",
+          "durationSeconds": 965,
+          "url": "https://www.youtube.com/watch?v=iNKS05UHEko&list=PLwGaDBtzBoU-S9AfCdiBlDmV1aVuTqqXu",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/iNKS05UHEko",
+          "thumbnailUrl": "https://i.ytimg.com/vi/iNKS05UHEko/hqdefault.jpg",
+          "verification": "confirmed_playlist_metadata"
+        }
+      ]
+    }
+  ]
+}

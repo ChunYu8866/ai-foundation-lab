@@ -1,0 +1,14 @@
+{
+  "name": "ai-foundation-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "知序 AI · 繁體中文 AI 基礎學習 App",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check src/app.js && node --check src/store.js && npm test"
+  },
+  "engines": { "node": ">=20" }
+}
