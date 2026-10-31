@@ -53,6 +53,7 @@ src/sources.json           兩份播放清單的已查核中繼資料
 src/exam-*.js              詳解題庫、考點提要與作答引擎
 src/exam-materials-s*.js   初級教材考點題與考前必背（科目一／二）
 src/question-bank.js       351 題與16考點整合
+src/bank-summary.js        首頁用題庫摘要；完整題庫於首屏後背景載入
 src/practice.js            詳解閱讀、即時判題、暫存、自訂模擬
 src/exam.css               備考介面與手機排版
 src/store.js               備份驗證、狀態儲存、日期與連續學習計算

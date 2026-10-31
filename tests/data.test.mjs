@@ -1,7 +1,10 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { modules, questions, glossary, references, topics, examReferences } from '../src/content.js';
+import { readFileSync } from 'node:fs';
+import { modules, glossary, references } from '../src/content.js';
+import { questions, topics, examReferences } from '../src/question-bank.js';
+import { bankSummary } from '../src/bank-summary.js';
 
 const sources = JSON.parse(await readFile(new URL('../src/sources.json', import.meta.url), 'utf8'));
 const videos = sources.playlists.flatMap(p => p.videos);
@@ -119,6 +122,11 @@ test('all 16 official reference topics receive 15 new questions across three dif
   }
   assert.ok(questions.filter(q=>q.type==='計算').length>=9);
   assert.equal(new Set(questions.map(q=>q.prompt)).size,questions.length,'duplicate prompts');
+});
+
+test('home-page bank summary matches the loaded question bank',()=>{
+  assert.deepEqual(bankSummary,{total:questions.length,topics:topics.length});
+  for(const file of ['../index.html','../public/manifest.webmanifest'])assert.match(readFileSync(new URL(file,import.meta.url),'utf8'),new RegExp(`${questions.length} 題`),`${file}: stale question count`);
 });
 
 test('primary-level material questions cover every topic with original items and study points',()=>{

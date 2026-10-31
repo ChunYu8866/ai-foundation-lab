@@ -188,7 +188,6 @@ export const modules = [
   }
 ];
 
-export { questions, topics, examReferences, examInfo } from './question-bank.js';
 
 export const glossary = [
   { term: '人工智慧', en: 'Artificial Intelligence · AI', definition: '讓系統完成通常需要智慧的任務的廣泛領域，例如辨識、推論、預測與生成。', moduleId: 'ai-foundations' },
