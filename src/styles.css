@@ -34,3 +34,34 @@
 .skip-link { position: fixed; z-index: 1000; top: 8px; left: 8px; padding: 10px 16px; border-radius: 8px; background: #174d43; color: white; transform: translateY(-160%); }
 .skip-link:focus { transform: translateY(0); }
 @media(max-width:900px) { .sidebar { visibility: hidden; } .sidebar.is-open { visibility: visible; } }
+
+/* Let long bilingual lessons and imported notes reflow inside grid and flex tracks. */
+.main-shell,.main-content,.dashboard-grid>*,.lesson-layout>*,.course-grid>*,.glossary-grid>*,.notes-grid>*,.quiz-intro>*,.source-card .section-header>*,.source-disclosure>div,.backup-panel>div{min-width:0}
+.lesson-article,.quiz-card,.review-item,.source-card,.reference-panel,.note-card,.glossary-card,.course-body,.lesson-info,.page-heading>div,.next-lesson>span{overflow-wrap:anywhere}
+.quiz-option>span:nth-child(2),.source-video>span:nth-child(2),.video-row>span:nth-child(2){min-width:0;overflow-wrap:anywhere}
+.course-meta,.lesson-meta,.quiz-progress{flex-wrap:wrap}
+.sidebar{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.lesson-layout>aside>.source-note{grid-column:1/-1}
+@media(max-width:1024px){
+  .button,.filter-button{min-height:44px}
+  .known-button,.breadcrumb .mobile-menu{width:44px;height:44px;flex-shrink:0}
+  .quiz-option{min-height:52px}
+  .back-link{min-height:44px;white-space:normal}
+  .source-video{min-height:52px}
+  .reference-panel>a{min-height:44px;overflow-wrap:anywhere}
+}
+@media(max-width:600px){
+  .search-input,.note-editor .note-textarea{font-size:16px}
+  .search-input{min-height:44px}
+  .lesson-article>p,.content-section p,.quiz-option,.quiz-feedback p,.glossary-definition,.note-preview{font-size:14px}
+  .objective-list,.example-box p,.takeaway,.review-item>p{font-size:13px}
+  .source-video,.source-disclosure,.source-card p,.reference-panel>a{font-size:12px}
+  .quiz-actions .button{white-space:normal;text-align:center}
+  .source-card .button{max-width:100%;white-space:normal}
+  .hero-footnote{white-space:normal}
+  .lesson-completion>.button{flex:1 1 135px}
+  .backup-actions{min-width:0;max-width:100%}
+  .backup-actions>.button{flex:1 1 auto}
+  .known-button{width:44px;height:44px}
+  .source-card .section-header .button{font-size:11px}
+}

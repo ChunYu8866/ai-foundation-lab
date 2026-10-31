@@ -83,6 +83,7 @@ app.addEventListener('input',e=>{
  if(e.target.id==='course-search'||e.target.id==='glossary-search'){const inputId=e.target.id,pos=e.target.selectionStart;search=e.target.value;render();const field=document.getElementById(inputId);field.focus();field.setSelectionRange(pos,pos);}
 });
 app.addEventListener('change',async e=>{if(e.target.id!=='import-file'||!e.target.files?.[0])return;const file=e.target.files[0];if(file.size>2_000_000){toast('備份檔過大，請選擇 2 MB 以下的 JSON。');return;}try{const candidate=normalizeState(JSON.parse(await file.text()));if(!confirm('匯入會覆蓋目前的筆記與進度。確定使用這份備份嗎？')){e.target.value='';return;}state=candidate;save();render();toast('已還原你的學習紀錄。');}catch{toast('無法讀取備份，請使用知序 AI 匯出的 JSON 檔。');e.target.value='';}});
+window.matchMedia('(max-width: 900px)').addEventListener('change',()=>{mobileOpen=false;render();});
 window.addEventListener('hashchange',()=>{mobileOpen=false;search='';render();window.scrollTo({top:0,behavior:'instant'});document.querySelector('#main').focus({preventScroll:true});});
 window.addEventListener('keydown',e=>{if(e.key==='Escape'&&mobileOpen){mobileOpen=false;render();}});
 window.addEventListener('online',()=>toast('已重新連線。'));

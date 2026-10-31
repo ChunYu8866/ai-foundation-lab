@@ -4,7 +4,7 @@
 
 ## 使用 App
 
-[開啟知序 AI](https://ai-foundation-lab-ipas.chunyu88.chatgpt.site)（私人 App，需使用擁有者帳號登入）
+[開啟知序 AI](https://chunyu8866.github.io/ai-foundation-lab/)（公開使用，免登入）
 
 - **6 大模組、12 個單元**：原創導讀、學習目標、生活例子與一句重點。
 - **17 部來源影片**：完整保留兩份清單的標題、順序、時長和 YouTube 連結；主題單元映射其中 16 部教學影片，考試分享保留於影片庫。
@@ -28,7 +28,17 @@ npm run check
 npm run build
 ```
 
-`check` 執行 JavaScript 語法檢查及 Node 原生測試；`build` 將可直接部署的靜態檔案輸出至 `dist/`。可部署到任何支援 HTTPS 的靜態主機；所有資源使用相對路徑，也適用於 GitHub Pages 子目錄。此私人儲存庫不會自動公開或啟用 GitHub Pages。
+`check` 執行 JavaScript 語法檢查及 Node 原生測試；`build` 將可直接部署的靜態檔案輸出至 `dist/`。可部署到任何支援 HTTPS 的靜態主機；所有資源使用相對路徑，也適用於 GitHub Pages 子目錄。正式網站由 GitHub Pages 從公開儲存庫的 `main` 分支根目錄發布。根目錄的 `.nojekyll` 停用 Jekyll 處理，保留原生 ES modules 與靜態資源路徑。更新 `main` 後，GitHub 會自動重新部署，無須 API key 或額外套件。
+
+## 公開部署與 RWD
+
+正式網址：<https://chunyu8866.github.io/ai-foundation-lab/>
+
+GitHub 設定為 **Settings → Pages → Deploy from a branch → main → /(root)**。靜態入口已在根目錄，無須上傳 `dist/`；`npm run build` 仍可供其他靜態主機使用。所有路徑相對於目前專案，支援 GitHub Pages 的 `/ai-foundation-lab/` 子路徑。
+
+介面依手機、平板與桌面寬度重排，包含900px側欄切換、可換行篩選列、課程卡片與雙欄導讀、44px觸控目標、長文字與筆記溢出保護。使用者無需登入；學習紀錄各自保存在自己的瀏覽器中。
+
+如果原先在另一個網址使用 App，可先於舊網址「我的筆記」匯出備份，再在此公開網址匯入，接續個人進度。
 
 ## 專案結構
 
