@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { modules, questions, glossary, references } from '../src/content.js';
+import { modules, questions, glossary, references, topics, examReferences } from '../src/content.js';
 
 const sources = JSON.parse(await readFile(new URL('../src/sources.json', import.meta.url), 'utf8'));
 const videos = sources.playlists.flatMap(p => p.videos);
@@ -72,8 +72,10 @@ test('all 16 topical videos are mapped to lessons; exam-sharing video remains a 
   assert.deepEqual([...mapped].sort(), [...topical].sort());
 });
 
-test('36 original questions have valid answer choices and consistent module/lesson references', () => {
-  assert.equal(questions.length, 36);
+test('351 detailed questions have valid choices, traceable sources and consistent lesson references', () => {
+  assert.equal(questions.length, 351);
+  const topicCodes=new Set(topics.map(t=>t.code));
+  const referenceIds=new Set(examReferences.map(r=>r.id));
   assert.equal(new Set(questions.map(q => q.id)).size, questions.length);
   for (const question of questions) {
     assert.ok(moduleIds.has(question.moduleId), `unknown module ${question.moduleId}`);
@@ -84,9 +86,59 @@ test('36 original questions have valid answer choices and consistent module/less
     assert.equal(new Set(question.options).size, 4);
     assert.ok(Number.isInteger(question.answer) && question.answer >= 0 && question.answer < 4);
     assert.ok(question.prompt && question.explanation);
+    assert.ok(topicCodes.has(question.code),`unknown assessment code ${question.code}`);
+    assert.equal(question.subject,question.code.startsWith('L11')?1:2);
+    assert.ok(['基礎','應用','進階'].includes(question.difficulty));
+    assert.ok(['觀念','情境','計算','比較'].includes(question.type));
+    assert.equal(question.optionExplanations.length,4);
+    for(const text of question.optionExplanations) assert.ok(text.length>=20,`${question.id}: option explanation too short`);
+    assert.ok(question.explanation.length>=70,`${question.id}: insufficient reasoning`);
+    assert.ok(question.extension.length>=35,`${question.id}: missing extended learning`);
+    assert.ok(question.pitfall.length>=12 && question.memoryTip.length>=8,`${question.id}: missing misconception or memory cue`);
+    assert.ok(question.tags.length>=2);
+    assert.ok(question.referenceIds.length>0);
+    for(const id of question.referenceIds)assert.ok(referenceIds.has(id),`${question.id}: missing source ${id}`);
   }
   for (const lesson of lessons) {
     assert.ok(questions.some(q => q.lessonId === lesson.id), `no practice for ${lesson.id}`);
+  }
+});
+
+test('all 16 official reference topics receive 15 new questions across three difficulty levels',()=>{
+  const expected=['L11101','L11102','L11201','L11202','L11203','L11301','L11302','L11401','L11402','L12101','L12102','L12201','L12202','L12301','L12302','L12303'];
+  assert.deepEqual(topics.map(t=>t.code),expected);
+  for(const topic of topics){
+    const items=questions.filter(q=>q.code===topic.code&&q.id.startsWith('ex-'));
+    assert.equal(items.length,15,topic.code);
+    assert.deepEqual(['基礎','應用','進階'].map(level=>items.filter(q=>q.difficulty===level).length),[5,6,4],topic.code);
+    assert.ok(items.filter(q=>['情境','計算'].includes(q.type)).length>=6,`${topic.code}: insufficient scenario practice`);
+    assert.ok(topic.summary.length>=150);
+    assert.ok(topic.essentials.length>=5 && topic.contrasts.length>=1 && topic.checklist.length>=3);
+    for(const id of topic.lessonIds)assert.ok(lessonById.has(id));
+    for(const id of topic.referenceIds)assert.ok(examReferences.some(r=>r.id===id));
+  }
+  assert.ok(questions.filter(q=>q.type==='計算').length>=9);
+  assert.equal(new Set(questions.map(q=>q.prompt)).size,questions.length,'duplicate prompts');
+});
+
+test('primary-level material questions cover every topic with original items and study points',()=>{
+  const material=questions.filter(q=>q.set==='material');
+  assert.equal(material.length,75);
+  for(const q of material)assert.match(q.id,/^mt-l1\d{4}-\d{2}$/);
+  for(const topic of topics){
+    assert.ok(material.filter(q=>q.code===topic.code).length>=4,`${topic.code}: needs material questions`);
+    assert.ok(topic.materialPoints.length>=4,`${topic.code}: needs study points`);
+  }
+  const positions=[0,1,2,3].map(i=>material.filter(q=>q.answer===i).length);
+  assert.ok(Math.min(...positions)>=12,`answer positions unbalanced: ${positions}`);
+});
+
+test('original question IDs, options and correct indices remain unchanged for saved progress',async()=>{
+  const legacy=JSON.parse(await readFile(new URL('./fixtures/legacy-questions.json',import.meta.url),'utf8'));
+  for(const original of legacy){
+    const current=questions.find(q=>q.id===original.id);
+    assert.ok(current,original.id);
+    for(const key of ['id','moduleId','lessonId','prompt','options','answer'])assert.deepEqual(current[key],original[key],`${original.id}: changed ${key}`);
   }
 });
 
