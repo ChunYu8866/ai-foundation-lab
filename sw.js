@@ -1,4 +1,4 @@
-const CACHE = 'zhixu-ai-v5';
+const CACHE = 'zhixu-ai-v6';
 const FILES = ['./','./index.html','./src/app.js','./src/store.js','./src/content.js','./src/styles.css','./src/sources.json','./src/exam.css','./src/practice.js','./src/exam-engine.js','./src/question-bank.js','./src/bank-summary.js','./src/exam-foundations.js','./src/exam-models.js','./src/exam-applications.js','./src/exam-materials-s1.js','./src/exam-materials-s2.js','./public/icons/icon.svg','./public/icons/apple-touch-icon.png','./public/icons/icon-192.png','./public/manifest.webmanifest'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('zhixu-ai-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));

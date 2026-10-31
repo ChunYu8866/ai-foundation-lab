@@ -29,3 +29,7 @@
 .material-points ul{padding-left:22px;font-size:15px;line-height:2.05;color:#5a4b31;margin:0 0 10px}
 .material-points li+li{margin-top:4px}
 @media(max-width:600px){.material-points{padding:18px 16px}.material-points ul{font-size:14px;padding-left:18px}.material-points .text-link{min-height:44px;font-size:12px}}
+
+/* 練習與結果頁的區塊與題庫頁同寬、靠左對齊；寬螢幕時不再一個置中、一個靠左。 */
+.detailed-quiz,.question-navigator,.result-topic-breakdown{max-width:none;margin-left:0;margin-right:0}
+.review-list:has(.detailed-review){max-width:none;margin:24px 0}
